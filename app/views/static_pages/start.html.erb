@@ -1,19 +1,53 @@
 
 <div class="container">
+	<div class="span8">
 <h1>Text Your Breakup</h1>
 <p>Because It's Just Easier That Way</p>
-<br><br>
+<br>
 
-<form accept-charset="UTF-8" action="/send" class="breakup_text"
-      id="breakup_text" method="post">
+<form accept-charset="UTF-8" action="/send" class="breakup_text" id="breakup_text" method="post">
+
+	<label for="name">Name</label>
+  	<input id="name" name="person" size="30" type="text" />
 
   	<label for="number">Number</label>
   	<input id="number" name="number_to_send_to" size="30" type="text" />
 
-	<label for="name">Name</label>
-  	<input id="name" name="person" size="30" type="text" />
-	<br>
-  	<input class="btn btn-large btn-primary" name="commit" type="submit" 
-         value="Send Breakup Text" />
+</div>
+  	
+
+<div class="span8">
+<div class="btn-group row-fluid" data-toggle="dropdown" data-toggle-name="gender">
+  <button type="button" value="0" class="btn span4" data-toggle="button">Boyfriend</p>
+  <button type="button" value="1" class="btn span4" data-toggle="button">Girlfriend</p>
+</div>
+<input type="hidden" name="gender" value="0" />
+
+<br><br>
+<div class="btn-group row-fluid" data-toggle="buttons-radio" data-toggle-name="importance">
+  <button type="button" value="0" class="btn span4" data-toggle="button">Serious</p>
+  <button type="button" value="1" class="btn span4" data-toggle="button">OKCupid</p>
+</div>
+<input type="hidden" name="importance" value="0" />
+<br><br>
+<div class="btn-group row-fluid" data-toggle="buttons-radio" data-toggle-name="reason">
+  <button type="button" value="0" class="btn span4" data-toggle="button">Not Interested</p>
+  <button type="button" value="1" class="btn span4" data-toggle="button">Found Someone Else</p>
+  <button type="button" value="2" class="btn span4" data-toggle="button">Eaten By Bear</p>
+</div>
+<input type="hidden" name="reason" value="0" />
+<br><br>
+<div class="btn-group row-fluid" data-toggle="buttons-radio" data-toggle-name="style">
+  <button type="button" value="0" class="btn span4" data-toggle="button">Casual</p>
+  <button type="button" value="1" class="btn span4" data-toggle="button">Shakespeare</p>
+  <button type="button" value="2" class="btn span4" data-toggle="button">Middle School</p>
+</div>
+<input type="hidden" name="style" value="0" />
+</div>
+
+<div class="span8">
+	<br>	<br>	
+  	<input class="btn btn-large btn-primary" name="commit" type="submit" value="Send Breakup Text" />
+  </div>
 </form> 
 </div>
