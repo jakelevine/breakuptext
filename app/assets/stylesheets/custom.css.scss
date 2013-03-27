@@ -1,1 +1,75 @@
+body{
+	font:"Helvetica Neue"
+}
+
 @import "bootstrap";
+
+input[type=text], textarea, input[type=text]:focus, textarea:focus {
+  border: 0;
+  box-shadow:none;
+  -webkit-box-shadow:none;
+  -moz-box-shadow:none;
+  display:inline;
+  margin-bottom:4px;
+   outline: none;
+   border-bottom:1px dashed gray;
+   font-size:38.5px;
+   height:38px;
+   color:#333333;
+   font-weight:300;
+   width:175px;
+   line-height:46px;
+   background-color:lightgoldenrodyellow;
+}
+
+.madlib{
+	
+	font-size:38.5px;
+	font-weight:300;
+	line-height:60px;
+}
+
+select{
+	border:0px;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-bottom: 1px dashed gray;
+	font-size: 38.5px;
+	height:48px;
+	color:#333333;
+	font-weight:300;
+	margin-bottom:5px;
+	padding:0px;
+	line-height:46px;
+	background-color:lightgoldenrodyellow;
+}
+
+#gender{
+	width:65px;
+}
+#reason{
+	width:535px;
+}
+#importance{
+	width:388px;
+}
+p{
+	line-height:55px;
+}
+
+#hisorher{
+	display:inline;
+}
+
+#sendtext{
+	display:none;
+}
+
+#number{
+	width:300px;
+	text-align:center;
+}
+#finalbutton{
+	width:551px;
+}
