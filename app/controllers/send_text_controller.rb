@@ -73,19 +73,19 @@ class SendTextController < ApplicationController
 		send_array = final_array.scan(/.{1,160}/)
 
 
-	#	@client = Twilio::REST::Client.new twilio_sid, twilio_token
+		@client = Twilio::REST::Client.new twilio_sid, twilio_token
 
 		
 		#render :json => text_array[0][0][0]
 
-	#	send_array.each do |text|
-	#		@client.account.sms.messages.create(
-	#		:from => '+15082732622',
-	#		:to => number_to_send_to,
-	#		:body => text
-	#		)
-	#		sleep(1)
-		#end
+		send_array.each do |text|
+			@client.account.sms.messages.create(
+			:from => '+15082732622',
+			:to => number_to_send_to,
+			:body => text
+			)
+			sleep(1)
+		end
 
 	end
 
