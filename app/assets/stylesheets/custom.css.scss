@@ -76,7 +76,9 @@ p{
 #nextbutton{
 	width:188px;
 }
-
+#anotherbutton{
+	width:318px;
+}
 ul{
 	display: inline !important;
 	font-size: 12px;
@@ -91,4 +93,12 @@ ul{
 }
 
 
+#footer{
+	
+	position:fixed;
+	bottom:5px;
+}
 
+.container{
+	margin-top:30px;
+}
