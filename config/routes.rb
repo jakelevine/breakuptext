@@ -5,6 +5,7 @@ Breakuptext::Application.routes.draw do
 
   match "/send" => "send_text#home", :via => :post
   resources :send_text # never matched '/products' via POST
+  #match "/sent" => "static_pages#sent"
 
 
   

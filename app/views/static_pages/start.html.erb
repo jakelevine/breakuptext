@@ -2,7 +2,7 @@
 
     <div class="madlib">
 
-      <form accept-charset="UTF-8" action="/send" class="breakup_text" id="breakup_text" method="post" data-validate="parsley">
+      <form accept-charset="UTF-8" action="/send" class="breakup_text" id="breakup_text" method="post" data-validate="parsley"  onsubmit="validateNumber();">
 
 
         <p><h1>Dear BreakupText,</h1>
@@ -43,14 +43,15 @@
       <input class="btn btn-large btn-primary" name="commit" type="button" id="nextbutton" value="Next" onclick="validateNames()"/>
       </div>      
 
-      <div id = "sendtext">
+          <div id = "sendtext">
 
-          <div id ="hisorher"></div> number is <input id="number" name="number_to_send_to" size="30" type="text" data-required="true" data-type="phone" data-type-email-message="Custom email message"/>
-          <br>
-          <input class="btn btn-large btn-danger" width="200" name="commit" id="finalbutton" type="submit" value="Send Breakup Text" />
-        </form> 
-      </div>  	
-
+              <div id ="hisorher"></div> number is <input id="number" name="number_to_send_to" size="30" type="text" data-required="true" data-type="phone" />
+              <br>
+              <input class="btn btn-large btn-danger" width="200" name="commit" id="finalbutton" type="submit" value="Send Breakup Text" />
+              </form> 
+          <div class = "small"><br>Your breakup will take about <div id="timer">10</div> seconds to complete, so please be patient.</div>
+          </div>    
+          
   </div>
 
 
@@ -82,6 +83,44 @@
     }
 
   }
+
+function validateNumber(){
+
+  $( '#number' ).parsley( 'validate' )
+
+  if($( '#number' ).parsley( 'validate' )){
+    calltimer();
+    return true;
+  }
+  else{
+    return false;
+  }
+
+
+}
+
+
+
+var count=10;
+
+function calltimer(){
+  var counter=setInterval(timer, 1000); //1000 will  run it every 1 second  
+}
+
+
+function timer()
+{
+  count=count-1;
+  if (count <= 0)
+  {
+     clearInterval(counter);
+     //counter ended, do something here
+     return;
+  }
+
+  //Do code for showing the number of seconds here
+ document.getElementById("timer").innerHTML=count + " more"; // watch for spelling
+}
 
 
 </script>
