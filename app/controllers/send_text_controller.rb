@@ -14,9 +14,9 @@ class SendTextController < ApplicationController
 		number_to_send_to = params[:number_to_send_to]
 		person = params[:person]
 		
-		gender = params[:gender]
-		importance = params[:importance]
-		reason = params[:reason]
+		gender = params[:gender].to_i
+		importance = params[:importance].to_i
+		reason = params[:reason].to_i
 		fromname = params[:from_name]
 		
 
@@ -69,7 +69,8 @@ class SendTextController < ApplicationController
 
 
 
-		final_array = text_array[0][0][0]
+
+		final_array = text_array[gender][importance][reason]
 		send_array = final_array.scan(/.{1,155}/)
 
 
