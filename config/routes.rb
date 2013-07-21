@@ -7,7 +7,7 @@ Breakuptext::Application.routes.draw do
   resources :send_text # never matched '/products' via POST
   #match "/sent" => "static_pages#sent"
 
-
+  match "/iphone" => "static_pages#iphone"
   
 
 
