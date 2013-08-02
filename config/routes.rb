@@ -1,6 +1,6 @@
 Breakuptext::Application.routes.draw do
   
-  root to: 'static_pages#start'
+  root to: 'static_pages#home'
   
 
   match "/send" => "send_text#home", :via => :post
@@ -9,7 +9,10 @@ Breakuptext::Application.routes.draw do
 
   match "/iphone" => "static_pages#iphone"
   
-
+  match "/home" => "static_pages#home"
+  match "/press" => "static_pages#press"
+  match "/web" => 'static_pages#start'
+  match "/about" => 'static_pages#about'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
