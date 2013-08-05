@@ -2,7 +2,7 @@
 <html>
 <head>
   <script type='text/javascript'>var _sf_startpt=(new Date()).getTime()</script>
-  <title>BreakupText for iPhone — Because It's Just Easier This Way</title>
+  <title>MakeupText for iPhone — Because It's Just Easier This Way</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -18,10 +18,10 @@
 
     </script>
 
-<meta property="og:title" content="BreakupText for iPhone" />
+<meta property="og:title" content="MakeupText for iPhone" />
 <meta property="og:image" content="<%=asset_path "icon.jpeg"%>" />
-<meta property="og:description" content="Breaking up with someone? There's an app for that." />
-<meta name="apple-itunes-app" content="app-id=674333306">
+<meta property="og:description" content="Want to win someone back? There's an app for that." />
+<meta name="apple-itunes-app" content="app-id=681601569">
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic' rel='stylesheet' type='text/css'>
 
 <style>
@@ -71,44 +71,54 @@ hr{
   margin-bottom:20px;
   
 }
-.about-body{
-  width:500px;
-  margin:auto;
-}
 .app-header{
-  text-align: center;
-  font-size:100px;
+  float:left;
+  padding-top:15px;
+  padding-left:25px;
   background:#F8F8F8;  
   width:100%;
-  margin-top:0px;
-  height:170px;
+  height:45px;
+  
 }
+
 
 </style>
 
 
 </head>
 <body>
-  <div class="app-header">
-<%= link_to image_tag("makeup-logo-header.png", :width => "375px"), "/makeup" %>
+
+<div class="app-header">
+<%= link_to image_tag("breakup-logo-header.png", :width => "200px"), "/" %>
 </div>
+<br><br>
 
 <div class="container">
 <div class="iphone">
-  <%= link_to image_tag("logo2.png", :width => "400px"), "http://bit.ly/breakuptextiphone", :target => "_blank" %>
-<br>  <br>  
+  <%= link_to image_tag("makeup-logo2.png", :width => "400px"), "http://bit.ly/makeuptext", :target => "_blank" %>
+  <br>
+  We feel pretty bad about destroying thousands of relationships last week. 
+  <br>So now we want to make it up to you.<br> 
+  <br>
+  <%= link_to image_tag("makeuptext-iphone.png", :width => "600px"), "http://bit.ly/makeuptext", :target => "_blank" %>
+  <br><br>
+  Want to win someone back? 
+  <br>There’s an app for that. <br>
+  
+    <%= link_to image_tag("appstore.png"), "http://bit.ly/makeuptext", :class=>"download", :target => "_blank" %>
 
-<div class="about-body">
-BreakupText and MakeupText are brought to you by <a href="https://twitter.com/jrlevine" target="_blank">Jake Levine</a> and <a href="https://twitter.com/laurenleto" target="_blank">Lauren Leto</a>, and were inspired by the adventures of <a href="http://www.twitter.com/patrickainslie" target="_blank">Patrick Ainslie</a> and <a href="http://www.twitter.com/tim_sportz" target="_blank">Jim Schwartz</a>, and Ed Goin
-<br><br>
-Special thanks to <a href="http://kylejwarren.com">Kyle Warren</a> and <a href="http://babsooneeh.com/">Stella Kim</a> for the technical and design help!
-<br><br>
-  <i>Want to get in touch? <a href="mailto:jake@jakelevine.me">Email us!</a></i>
-</div>
- 
+  <br>
+  <%= link_to image_tag("presslogos.png", :width => "600px"), "/press" %>
 
   <div id="about">
-      <%= link_to "Home", "/" %>&nbsp;&nbsp;&nbsp;&nbsp; <%= link_to "Press", "/press" %> &nbsp;&nbsp;&nbsp;&nbsp; <%= link_to "BreakupText on the Web", "/web" %>
+      <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.breakuptext.me/makeup&amp;send=false&amp;layout=button_count&amp;width=200&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21&amp;appId=142077942632037" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:20px;" allowTransparency="true"></iframe>
+      &nbsp;&nbsp;
+
+
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.breakuptext.me/makeup" data-text="I used an iPhone app to win someone back. You can too." data-via="jrlevine" data-related="jrlevine" data-dnt="true">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<br>
+      <%= link_to "About", "/about" %> &nbsp;&nbsp;&nbsp;&nbsp; <%= link_to "Press", "/press" %>  &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "BreakupText on the Web", "/web" %>
   </div>
 </div>
 </div>
@@ -136,6 +146,7 @@ Special thanks to <a href="http://kylejwarren.com">Kyle Warren</a> and <a href="
          loadChartbeat : function() { oldonload(); loadChartbeat(); };
     })();
 </script>
+
 </body>
 
 </html>
