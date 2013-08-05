@@ -14,6 +14,8 @@ Breakuptext::Application.routes.draw do
   match "/web" => 'static_pages#start'
   match "/about" => 'static_pages#about'
 
+  match "/makeup" => 'static_pages#makeup'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

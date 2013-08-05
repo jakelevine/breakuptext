@@ -15,5 +15,10 @@ class StaticPagesController < ApplicationController
   def about
   	render :about, layout: false
   end
+
+  def makeup
+  	render :makeup, layout: false
+  end
+
 end
 
